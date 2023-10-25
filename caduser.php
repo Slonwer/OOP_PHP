@@ -1,6 +1,6 @@
 <?php
-    session_start();
-    ob_start();
+    session_start(); // inicia a sesão 
+    ob_start(); // limpa os ultimo registo
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
