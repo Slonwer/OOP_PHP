@@ -1,80 +1,30 @@
-# OOP_PHP
-
-![Image Description](https://c4.wallpaperflare.com/wallpaper/108/743/766/php-programming-life-success-wallpaper-preview.jpg)
-  
-##  OOP PHP METODO USANDO DURANTE O CURSO 
+# Shell_Bash
 
 
 
-```codigo  php
- <?php
-class user extends Conn {
-   public object $conn;
+Description
+A more detailed description of the project, explaining its purpose, features, and any additional relevant information.
 
-   public array $formDate;
+Requirements
+List of requirements needed to run the script, such as shell version, external dependencies, etc.
 
-   public function list() :array {
-    $this->conn = $this->conectar();
-    $query = "SELECT u.* FROM usuarios u ORDER BY nome";
-    $result = $this->conn->prepare($query);
-    $result->execute();
-    $retorno = $result->fetchAll();
-    //var_dump($retorno);
-    return $retorno;
-}
+Installation
+Instructions on how to install and configure the project. This may include specific commands to be executed, configurations to be made, and other necessary steps.
 
-public function insert() {
-     $this->conn = $this->conectar();
-     $query = "INSERT INTO  usuario  (nome, email, created) VALUE (:nome, :email, NOW ())";
-     $result = $this->conn->prepare ($query);
-     $result->execute();
-     $add_user = $this->conn->prepare("");
-     $add_user->bindParam(':nome', $this->formDate['nome']);
-     $add_user->bindParam(':email', $this->formDate['email']);
-     $add_user->execute();
+Usage
+Explanation on how to use the script, including examples of commands and arguments, and a description of what each does.
 
-     if ($result->rowCount()> 0) {
-      return true;
-     } else {
-      return false;
-      
-     } 
+Examples
+Some examples of common use cases, demonstrating how to use the script in different scenarios.
 
-     }
-}
-?>
+Contributing
+Information on how users can contribute to the project, such as reporting issues, submitting pull requests, suggesting improvements, etc.
 
-```
+Authors
+List of authors or contributors involved in the project.
 
-Precisa Banco de dados 
+Please note that this is just a general structure, and you can customize it according to your specific project requirements.
 
-##SQL 
-```BANCO DE DADOS SQL
+![Image Description](https://hackaday.com/wp-content/uploads/2017/03/tux-on-htop-featured.jpg?w=800)
 
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-DROP TABLE IF EXISTS `usuarios`;
-CREATE TABLE IF NOT EXISTS `usuarios` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `nome` varchar(220) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(220) COLLATE utf8mb4_unicode_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
-INSERT INTO `usuarios` (`id`, `nome`, `email`) VALUES
-(1, 'Ricardo', 'rrsecco@hotmail.com'),
-(2, 'Kelly', 'kelly@gmail.com.br'),
-(3, 'Jessica', 'jessica@gmail.com.br'),
-(4, 'Gabrielly', 'gabrielly@gmail.com.br'),
-(5, 'Marcos', 'marcos@gmail.com.br');
-COMMIT;
-
-
-```
-
-- **EXECICIO EM PHP PRECISA DO BANCO DE DADOS QUE VAI SER ESTÁ FEITO EM SW1
-- 
 
